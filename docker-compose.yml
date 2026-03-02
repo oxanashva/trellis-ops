@@ -7,6 +7,7 @@ services:
         # These now look for variables on your machine/shell
         VITE_CLOUD_NAME: ${VITE_CLOUD_NAME}
         VITE_API_URL: ${VITE_API_URL}
+        VITE_LOCAL: false
     container_name: trellis-running
     ports:
       - "3030:3030"
