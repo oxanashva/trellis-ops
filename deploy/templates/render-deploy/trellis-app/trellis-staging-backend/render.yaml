@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: trellis-staging-backend
+    runtime: image
+    image:
+      url: ghcr.io/oxanashva/trellis-backend:latest
+      creds:
+        fromRegistryCreds:
+          name: GHCR
+    envVars:
+      - key: MONGO_URL
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: SECRET
+        sync: false
+      - key: NODE_ENV
+        value: production
+    plan: free
+    autoDeployTrigger: "off"
+    region: frankfurt

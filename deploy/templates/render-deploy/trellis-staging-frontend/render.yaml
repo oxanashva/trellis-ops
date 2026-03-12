@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: trellis-staging-frontend
+    runtime: static
+    repo: https://github.com/oxanashva/trellis-app.git
+    rootDir: ./trellis-frontend
+    staticPublishPath: ./build
+    autoDeployTrigger: "off"
